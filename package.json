@@ -2,7 +2,7 @@
   "name": "san-jorge",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Albahdezs/card-sanjorge",
+  "homepage": "https://albahdezs.github.io/card-sanjorge",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

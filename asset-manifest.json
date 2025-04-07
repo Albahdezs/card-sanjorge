@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Albahdezs/card-sanjorge.git/static/css/main.16bc0d51.css",
-    "main.js": "/Albahdezs/card-sanjorge.git/static/js/main.c853b5ff.js",
-    "index.html": "/Albahdezs/card-sanjorge.git/index.html",
-    "main.16bc0d51.css.map": "/Albahdezs/card-sanjorge.git/static/css/main.16bc0d51.css.map",
-    "main.c853b5ff.js.map": "/Albahdezs/card-sanjorge.git/static/js/main.c853b5ff.js.map"
+    "main.css": "/card-sanjorge/static/css/main.16bc0d51.css",
+    "main.js": "/card-sanjorge/static/js/main.c853b5ff.js",
+    "index.html": "/card-sanjorge/index.html",
+    "main.16bc0d51.css.map": "/card-sanjorge/static/css/main.16bc0d51.css.map",
+    "main.c853b5ff.js.map": "/card-sanjorge/static/js/main.c853b5ff.js.map"
   },
   "entrypoints": [
     "static/css/main.16bc0d51.css",

@@ -1,13 +1,143 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #f9f3ef;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100vh;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border: 2px solid #d2b48c;
+  border-radius: 12px;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 2rem;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img {
+  max-width: 90%;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-front h1 {
+  position: absolute;
+  top: 8%;
+  left: 25%;
+  font-size: 30px;
+  display: flex;
+  color: rgb(189, 6, 6);
+}
+
+.flip {
+  font-size: 12px;
+  margin-top: 10px;
+  color: red;
+  text-align: right;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #fffdf7;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: rgb(189, 6, 6);
+}
+
+.rose {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.flag {
+  margin-top: 20px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  margin-top: 150px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  padding: 10px 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: rgb(189, 6, 6);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .linkedin-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Opcional: Puedes agregar un efecto hover al icono de LinkedIn */
+.footer .linkedin-icon:hover {
+  opacity: 0.8;
 }

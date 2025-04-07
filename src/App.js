@@ -34,10 +34,7 @@ function FrontPage() {
   return (
     <div className="front">
       <h1>23 de abril de 2025</h1>
-      <img
-        src={`${process.env.PUBLIC_URL}/flowers/imgFront.jpg`}
-        alt="Claveles de San Jorge"
-      />
+      <img src="flowers/imgFront.jpg" alt="Claveles de San Jorge" />
       <p className="flip">Girar ➡️</p>
     </div>
   );
@@ -50,11 +47,7 @@ function InsideCard() {
       <p>En este día de San Jorge, te deseo alegría, paz y un buen libro.</p>
       <p>¡Un abrazo!</p>
       <p className="rose">🌹</p>
-      <img
-        src={`${process.env.PUBLIC_URL}/flowers/flag.png`}
-        alt="Bandera de Aragón"
-        className="flag"
-      />
+      <img src="flowers/flag.png" alt="Bandera de Aragón" className="flag" />
     </div>
   );
 }
@@ -78,7 +71,7 @@ function Footer() {
           rel="noopener noreferrer"
         >
           <img
-            src={`${process.env.PUBLIC_URL}/flowers/linkedin.svg`}
+            src="flowers/linkedin.svg"
             alt="LinkedIn"
             className="linkedin-icon"
           />

@@ -54,7 +54,7 @@ function InsideCard() {
 
   function handleCopy(e) {
     e.stopPropagation();
-    navigator.clipboard.writeText("¡Feliz día de Aragón!");
+    navigator.clipboard.writeText(window.location.href);
     setCopied(true);
     setTimeout(() => {
       setCopied(false);

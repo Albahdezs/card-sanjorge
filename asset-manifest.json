@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/card-sanjorge/static/css/main.7e11680e.css",
-    "main.js": "/card-sanjorge/static/js/main.a63d728d.js",
+    "main.css": "/card-sanjorge/static/css/main.d0536e0a.css",
+    "main.js": "/card-sanjorge/static/js/main.8eefedbc.js",
     "index.html": "/card-sanjorge/index.html",
-    "main.7e11680e.css.map": "/card-sanjorge/static/css/main.7e11680e.css.map",
-    "main.a63d728d.js.map": "/card-sanjorge/static/js/main.a63d728d.js.map"
+    "main.d0536e0a.css.map": "/card-sanjorge/static/css/main.d0536e0a.css.map",
+    "main.8eefedbc.js.map": "/card-sanjorge/static/js/main.8eefedbc.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e11680e.css",
-    "static/js/main.a63d728d.js"
+    "static/css/main.d0536e0a.css",
+    "static/js/main.8eefedbc.js"
   ]
 }

@@ -3,14 +3,14 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins";
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
+  min-height: 100vh;
   background: #f9f3ef;
 }
 
@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  height: 100vh;
+  padding: 20px;
 }
 
 .card {
@@ -28,6 +28,7 @@ body {
   height: 400px;
   perspective: 1000px;
   cursor: pointer;
+  margin: 20px 0;
 }
 
 .card-inner {
@@ -36,7 +37,6 @@ body {
   position: relative;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  transform-origin: center center;
 }
 
 .card.flipped .card-inner {
@@ -54,130 +54,158 @@ body {
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 2rem;
-}
-
-.card-front {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.card-front img {
-  position: relative;
-  max-width: 90%;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 1;
-}
-
-.card-front h1 {
-  position: absolute;
-  top: 8%;
-  left: 25%;
-  font-size: 30px;
-  display: flex;
-  color: rgb(189, 6, 6);
-  z-index: 2;
-}
-
-.flip {
-  font-size: 12px;
-  margin-top: 10px;
-  color: red;
-  text-align: right;
-  font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
 .card-back {
   transform: rotateY(180deg);
+  background: #fffdf7;
+}
+
+.card-front img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.card-front h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+  color: rgb(189, 6, 6);
+  text-align: center;
+  width: 80%;
+}
+
+.card-front h1 span {
+  font-size: 1rem;
+  color: #666;
+}
+
+.flip {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  font-size: 0.75rem;
+  color: red;
+}
+
+.inside {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background: #fffdf7;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inside h2 {
+  font-size: 1.2rem;
+}
+
+.inside p {
+  font-size: 0.8rem;
 }
 
 h2 {
   margin-bottom: 10px;
   color: rgb(189, 6, 6);
+  font-size: 1.5rem;
 }
 
-.rose {
-  margin-top: 20px;
-  font-size: 30px;
+.inside .rose {
+  font-size: 2rem;
+  margin: 10px 0;
 }
 
 .flag {
-  margin-top: 20px;
-  width: 200px;
+  max-width: 70%;
+  height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
 .footer {
-  margin-top: 150px;
+  margin-top: 40px;
   text-align: center;
   font-size: 0.8rem;
   color: #666;
-  padding: 10px 0;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .footer p {
-  margin: 0;
-  margin-top: 20px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer a {
   color: rgb(189, 6, 6);
   text-decoration: none;
+  transition: opacity 0.3s;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
-.footer .linkedin-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-  vertical-align: middle;
-}
-
+.linkedin-icon,
 .youtube-icon,
 .github-icon {
   width: 20px;
   height: 20px;
-  margin-left: 10px;
-  vertical-align: middle;
+  transition: transform 0.3s;
 }
 
-/* Opcional: Puedes agregar un efecto hover al icono de LinkedIn */
-.footer .linkedin-icon:hover {
-  opacity: 0.8;
+.linkedin-icon:hover,
+.youtube-icon:hover,
+.github-icon:hover {
+  transform: scale(1.1);
 }
 
 .share-btn {
-  font-size: 12px;
-  margin-top: 20px;
-  padding: 10px 20px;
+  font-size: 0.75rem;
+  padding: 4px 8px;
   background-color: #bd0606;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
-  font-family: inherit;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin-top: 15px;
 }
 
 .share-btn:hover {
   background-color: #a50505;
+  transform: scale(1.05);
 }
 
 .copied-msg {
-  margin-top: 5px;
   color: green;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
+  margin-top: 5px;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }

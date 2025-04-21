@@ -39,7 +39,9 @@ function CardSanJorge() {
 function FrontPage() {
   return (
     <div className="front">
-      <h1>23 de abril de 2025</h1>
+      <h1>
+        23 de abril <span>2025</span>
+      </h1>
       <img
         src={`${process.env.PUBLIC_URL}/flowers/imgFront.jpg`}
         alt="Claveles de San Jorge"
@@ -54,11 +56,13 @@ function InsideCard() {
 
   function handleCopy(e) {
     e.stopPropagation();
-    navigator.clipboard.writeText(window.location.href);
-    setCopied(true);
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
+    // Copy the current URL to the clipboard
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    });
   }
 
   return (

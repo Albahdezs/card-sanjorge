@@ -130,7 +130,7 @@ function Footer() {
           />
         </a>
         <a
-          href="https://github.com/Albahdezs"
+          href="https://github.com/Albahdezs/card-sanjorge"
           target="_blank"
           rel="noopener noreferrer"
         >
